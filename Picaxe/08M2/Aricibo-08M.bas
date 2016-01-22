@@ -5,8 +5,14 @@
 '    Standard download cable and resistors.
 '    LED on output 0 connected so that HIGH
 '       lights the LED.
+' 
+' Changes:
+'	2016-01-20: Added variable to set pause
+'			length.
 
 SYMBOL byteCount = 80
+
+SYMBOL pauseLength = 125
 
 SYMBOL index = B13
 SYMBOL bits  = B0
@@ -66,7 +72,7 @@ Flash:
 	
 	' High for 1/4 second.
 	HIGH LED
-	PAUSE 250
+	PAUSE pauseLength
 	
 	' If bit is 0 then turn LED off.
 	' Delay for another 1/4 second.
@@ -74,11 +80,11 @@ Flash:
 		LOW LED
 	ENDIF
 
-	PAUSE 250
+	PAUSE pauseLength
 	
 	' Turn the LED off for 1/4 second
 	' to complete the bit cycle.
 	LOW LED
-	PAUSE 250
+	PAUSE pauseLength
 	
 	RETURN
