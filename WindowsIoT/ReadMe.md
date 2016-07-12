@@ -1,3 +1,3 @@
-#Windows 10 Core projects
+#Windows 10 Internet of Things projects
 
-Solutions designed to run on Windows 10 Core IoT devices.
+Solutions designed to run on Windows 10 IoT devices.
